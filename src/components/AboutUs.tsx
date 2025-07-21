@@ -13,25 +13,25 @@ const AboutUs = () => {
             {/* Left Column - Content */}
             <div className="lg:w-1/2 text-center lg:text-left">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-2">
-                Mecânica Godin - Tradição e Inovação
+                Mecânica Godin – Especialistas em Câmbios Automáticos e Manutenção Completa
               </h2>
               <p className="mb-4 sm:mb-6 text-muted-foreground text-sm sm:text-base leading-relaxed">
-                Há mais de uma década cuidando do seu veículo com dedicação, qualidade e tecnologia de ponta.
+                Localizada em Ampére/PR, unimos experiência, tecnologia e dedicação para cuidar do seu veículo como se fosse nosso.
               </p>
               
               <div className="space-y-4 sm:space-y-6 mb-4 sm:mb-6">
                 <p className="text-foreground text-sm sm:text-base leading-relaxed">
-                  A Mecânica Godin é especializada em serviços automotivos de alta qualidade, 
-                  com foco especial em câmbios automáticos e veículos elétricos/híbridos. 
-                  Nossa equipe de profissionais qualificados utiliza equipamentos modernos 
-                  e técnicas avançadas para garantir o melhor atendimento.
+                  Na Mecânica Godin, somos especializados em câmbios automáticos, mas também oferecemos 
+                  serviços completos de manutenção preventiva e corretiva, diagnósticos precisos e 
+                  reparos de alta qualidade.
                 </p>
                 
                 <div className="glass p-4 sm:p-6 rounded-lg border-l-4 border-primary">
                   <p className="text-foreground text-sm sm:text-base leading-relaxed">
-                    <strong>Nossa missão:</strong> Oferecer serviços automotivos de excelência, 
-                    sempre atualizados com as mais recentes tecnologias do mercado, 
-                    garantindo segurança e satisfação para nossos clientes.
+                    <strong>Nosso compromisso:</strong> Oferecer atendimento transparente, orçamentos justos 
+                    e soluções rápidas para garantir a segurança e o desempenho do seu carro. Trabalhamos 
+                    com peças de confiança e uma equipe de profissionais qualificados, prontos para 
+                    superar suas expectativas.
                   </p>
                 </div>
               </div>
@@ -43,9 +43,9 @@ const AboutUs = () => {
                     <Check className="text-primary" size={16} />
                   </div>
                   <div>
-                    <h4 className="text-base sm:text-lg font-semibold text-foreground">Especialização Técnica</h4>
+                    <h4 className="text-base sm:text-lg font-semibold text-foreground">Especialização em Câmbios</h4>
                     <p className="text-muted-foreground text-sm sm:text-base">
-                      Profissionais especializados em câmbios automáticos e veículos elétricos
+                      Especialistas em câmbios automáticos com experiência e tecnologia avançada
                     </p>
                   </div>
                 </div>
@@ -55,9 +55,9 @@ const AboutUs = () => {
                     <Check className="text-primary" size={16} />
                   </div>
                   <div>
-                    <h4 className="text-base sm:text-lg font-semibold text-foreground">Equipamentos Modernos</h4>
+                    <h4 className="text-base sm:text-lg font-semibold text-foreground">Atendimento Transparente</h4>
                     <p className="text-muted-foreground text-sm sm:text-base">
-                      Tecnologia de ponta para diagnósticos precisos e reparos eficientes
+                      Orçamentos justos e atendimento claro para sua total tranquilidade
                     </p>
                   </div>
                 </div>
