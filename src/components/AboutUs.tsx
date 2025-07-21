@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { Check, Award, Users, Clock } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -112,16 +113,23 @@ const AboutUs = () => {
               </div>
             </div>
             
-            {/* Right Column - Image */}
+            {/* Right Column - Video */}
             <div className="lg:w-1/2 w-full">
               <div className="relative max-w-md mx-auto lg:max-w-none">
                 <div className="bg-primary/20 w-full h-full absolute -left-3 sm:-left-6 -top-3 sm:-top-6 rounded-lg"></div>
-                <img 
-                  alt="Equipe especializada da Mecânica Godin trabalhando em oficina moderna" 
-                  className="relative z-10 rounded-lg shadow-lg w-full object-cover h-64 sm:h-80 lg:h-96" 
-                  src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=1470&auto=format&fit=crop"
-                  loading="lazy"
-                />
+                <div className="relative z-10 rounded-lg shadow-lg w-full h-64 sm:h-80 lg:h-96 overflow-hidden">
+                  <video 
+                    className="w-full h-full object-cover rounded-lg"
+                    loop
+                    autoPlay
+                    muted
+                    playsInline
+                    preload="auto"
+                    style={{ pointerEvents: 'none' }}
+                  >
+                    <source src="/lovable-uploads/godin2.mp4" type="video/mp4" />
+                  </video>
+                </div>
               </div>
             </div>
           </div>
