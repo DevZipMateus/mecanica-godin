@@ -55,47 +55,73 @@ const Services = () => {
           </p>
         </div>
         
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 px-4 mb-8">
-          {services.map(service => (
-            <div 
-              key={service.id} 
-              style={{
-                animationDelay: service.delay
-              }} 
-              className="glass rounded-lg p-6 sm:p-8 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 transform hover:scale-[1.02] animate-fade-in"
-            >
-              <div className="bg-primary/10 p-3 sm:p-4 rounded-lg inline-block mb-4 sm:mb-5">
-                <service.icon className="text-primary" size={24} />
-              </div>
-              <h3 className="text-lg sm:text-xl font-semibold mb-3 text-foreground text-shadow-sm">
-                {service.title}
-              </h3>
-              <p className="text-sm sm:text-base text-muted-foreground mb-4 text-shadow-sm leading-relaxed">
-                {service.description}
-              </p>
-              
-              {/* Features List */}
-              <ul className="space-y-2 mb-6">
-                {service.features.map((feature, index) => (
-                  <li key={index} className="flex items-center text-sm text-muted-foreground">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 flex-shrink-0"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              
-              <a 
-                href="https://wa.me/5546999418304" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors duration-300 text-shadow-sm text-sm sm:text-base"
-                aria-label={`Solicitar orçamento para ${service.title} via WhatsApp`}
+        {/* Main Content Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-8">
+          {/* Left Side - Services Content */}
+          <div className="space-y-6 px-4">
+            {services.map(service => (
+              <div 
+                key={service.id} 
+                style={{
+                  animationDelay: service.delay
+                }} 
+                className="glass rounded-lg p-6 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 transform hover:scale-[1.02] animate-fade-in"
               >
-                Solicitar orçamento <ArrowRight size={16} className="ml-1" />
-              </a>
+                <div className="bg-primary/10 p-3 rounded-lg inline-block mb-4">
+                  <service.icon className="text-primary" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold mb-3 text-foreground text-shadow-sm">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-muted-foreground mb-4 text-shadow-sm leading-relaxed">
+                  {service.description}
+                </p>
+                
+                {/* Features List */}
+                <ul className="space-y-2 mb-4">
+                  {service.features.map((feature, index) => (
+                    <li key={index} className="flex items-center text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 flex-shrink-0"></div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <a 
+                  href="https://wa.me/5546999418304" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors duration-300 text-shadow-sm text-sm"
+                  aria-label={`Solicitar orçamento para ${service.title} via WhatsApp`}
+                >
+                  Solicitar orçamento <ArrowRight size={16} className="ml-1" />
+                </a>
+              </div>
+            ))}
+          </div>
+          
+          {/* Right Side - Video */}
+          <div className="px-4 flex items-center justify-center">
+            <div className="glass rounded-lg p-6 w-full max-w-lg">
+              <h3 className="text-xl font-bold text-foreground mb-4 text-center text-shadow-sm">
+                Conheça Nossa Oficina
+              </h3>
+              <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+                <video 
+                  className="w-full h-full object-cover"
+                  controls
+                  preload="metadata"
+                  poster="/lovable-uploads/logo.png"
+                >
+                  <source src="/lovable-uploads/videogodin.mp4" type="video/mp4" />
+                  Seu navegador não suporta o elemento de vídeo.
+                </video>
+              </div>
+              <p className="text-sm text-muted-foreground text-center mt-4 text-shadow-sm">
+                Veja de perto nossa estrutura e equipamentos de última geração.
+              </p>
             </div>
-          ))}
+          </div>
         </div>
         
         {/* CTA */}
