@@ -2,8 +2,42 @@
 import React from 'react';
 import { Check, Award, Users, Clock } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const AboutUs = () => {
+  const carouselImages = [
+    {
+      src: "/lovable-uploads/0f3e57de-fc1e-4b5e-9392-f8452f5c647b.png",
+      alt: "Volkswagen Golf modificado na oficina Mecânica Godin"
+    },
+    {
+      src: "/lovable-uploads/2499744c-4788-4ae6-94fd-602e51796241.png", 
+      alt: "Participação em evento técnico automotivo - Circuito Doutor-IE 2025"
+    },
+    {
+      src: "/lovable-uploads/e49fe1b4-42cc-48ce-af4c-ae54edfbd279.png",
+      alt: "Serviço de manutenção de freios - disco de freio desgastado"
+    },
+    {
+      src: "/lovable-uploads/1475b112-5252-4270-a12e-9774b4f64305.png",
+      alt: "Especialista trabalhando em câmbio automático na Mecânica Godin"
+    },
+    {
+      src: "/lovable-uploads/1fa2a185-e590-4a80-abe7-7c6aa4900795.png",
+      alt: "Especialista em câmbios automáticos - Mecânica Godin"
+    },
+    {
+      src: "/lovable-uploads/c85f61f8-bff4-44ac-8f78-b4e3019b5abb.png",
+      alt: "Serviço de alinhamento e balanceamento de pneus"
+    }
+  ];
+
   return (
     <>
       {/* Light Section - Sobre a Mecânica Godin */}
@@ -76,6 +110,53 @@ const AboutUs = () => {
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Carousel Section - Um pouco sobre nós */}
+      <section className="py-12 sm:py-16 bg-muted/20">
+        <div className="container-custom px-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Um Pouco Sobre Nós
+            </h2>
+            <p className="text-muted-foreground text-sm sm:text-base max-w-2xl mx-auto">
+              Conheça nossos trabalhos, serviços especializados e a qualidade que oferecemos na Mecânica Godin.
+            </p>
+          </div>
+
+          <div className="relative">
+            <Carousel 
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full max-w-5xl mx-auto"
+            >
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {carouselImages.map((image, index) => (
+                  <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                        <CardContent className="p-0">
+                          <div className="aspect-square relative">
+                            <img
+                              src={image.src}
+                              alt={image.alt}
+                              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                              loading="lazy"
+                            />
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden sm:flex" />
+              <CarouselNext className="hidden sm:flex" />
+            </Carousel>
           </div>
         </div>
       </section>
