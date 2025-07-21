@@ -86,8 +86,11 @@ const Services = () => {
               </ul>
               
               <a 
-                href="#contact" 
+                href="https://wa.me/5546999418304" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors duration-300 text-shadow-sm text-sm sm:text-base"
+                aria-label={`Solicitar orçamento para ${service.title} via WhatsApp`}
               >
                 Solicitar orçamento <ArrowRight size={16} className="ml-1" />
               </a>
@@ -105,8 +108,11 @@ const Services = () => {
               Entre em contato conosco e receba um atendimento especializado para seu veículo.
             </p>
             <a 
-              href="#contact" 
+              href="https://wa.me/5546999418304"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2 font-medium inline-flex text-shadow-sm text-sm sm:text-base"
+              aria-label="Falar com especialistas via WhatsApp"
             >
               <span>Fale com nossos especialistas</span>
               <ArrowRight size={18} />
