@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Wrench, Car, Battery, Gauge } from 'lucide-react';
@@ -11,8 +10,8 @@ const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1486754735734-325b5831c3ad?q=80&w=1470&auto=format&fit=crop" 
-          alt="Oficina mecânica moderna com equipamentos especializados" 
+          src="/lovable-uploads/3fac6ecf-c832-4022-8976-9184ab3118fe.png" 
+          alt="Fachada da Mecânica Godin à noite" 
           className="w-full h-full object-cover object-center" 
           loading="eager"
         />
