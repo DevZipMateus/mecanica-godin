@@ -10,8 +10,8 @@ const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/lovable-uploads/3fac6ecf-c832-4022-8976-9184ab3118fe.png" 
-          alt="Fachada da Mecânica Godin à noite" 
+          src="/lovable-uploads/8b24e8e7-0ae4-41f6-9078-23dc99a8b696.png" 
+          alt="Fachada da Mecânica Godin" 
           className="w-full h-full object-cover object-center" 
           loading="eager"
         />
