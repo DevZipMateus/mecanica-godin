@@ -111,7 +111,7 @@ const Services = () => {
                   className="w-full h-auto object-contain"
                   controls
                   loop
-                  autoplay
+                  autoPlay
                   muted
                   preload="metadata"
                   poster="/lovable-uploads/logo.png"
