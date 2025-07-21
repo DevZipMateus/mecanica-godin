@@ -100,7 +100,7 @@ const Services = () => {
             ))}
           </div>
           
-          {/* Right Side - Video */}
+          {/* Right Side - Animated Video */}
           <div className="px-4 flex items-center justify-center">
             <div className="glass rounded-lg p-6 w-full">
               <h3 className="text-xl font-bold text-foreground mb-4 text-center text-shadow-sm">
@@ -108,16 +108,15 @@ const Services = () => {
               </h3>
               <div className="relative w-full rounded-lg overflow-hidden shadow-lg">
                 <video 
-                  className="w-full h-auto object-contain"
-                  controls
+                  className="w-full h-auto object-cover rounded-lg"
                   loop
                   autoPlay
                   muted
-                  preload="metadata"
-                  poster="/lovable-uploads/logo.png"
+                  playsInline
+                  preload="auto"
+                  style={{ pointerEvents: 'none' }}
                 >
                   <source src="/lovable-uploads/videogodin.mp4" type="video/mp4" />
-                  Seu navegador não suporta o elemento de vídeo.
                 </video>
               </div>
               <p className="text-sm text-muted-foreground text-center mt-4 text-shadow-sm">
