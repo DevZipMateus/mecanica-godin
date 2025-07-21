@@ -216,15 +216,6 @@
     @apply transition-all duration-500 hover:opacity-90 hover:scale-[1.02];
   }
   
-  /* Plan cards */
-  .plan-card {
-    @apply bg-white rounded-xl p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-md border border-neutral-100;
-  }
-  
-  .plan-card-popular {
-    @apply bg-gradient-to-br from-white to-primary/20 rounded-xl p-6 md:p-8 shadow-md transition-all duration-300 hover:shadow-lg border border-primary/30 relative;
-  }
-  
   /* Feature list */
   .feature-item {
     @apply flex items-start mb-3;

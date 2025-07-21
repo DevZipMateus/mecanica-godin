@@ -1,40 +1,65 @@
 
 import React from 'react';
+import { Gauge, Battery, Wrench, Car } from 'lucide-react';
 
-const clients = [{
-  id: 1,
-  name: 'Construtora Segura',
-  logo: '/lovable-uploads/ebddf75c-7017-4d4b-9b50-4f07a02300b6.png',
-  logoPosition: 'object-center'
-}, {
-  id: 2,
-  name: 'Indústria Metalúrgica SP',
-  logo: '/lovable-uploads/d1aa02a6-86ac-4242-81ab-87000f020071.png',
-  logoPosition: 'object-center'
-}, {
-  id: 3,
-  name: 'Petroquímica Brasil',
-  logo: '/lovable-uploads/2b49cfe4-7f8e-4c7a-abf2-bb13c38c6df2.png',
-  logoPosition: 'object-center'
-}, {
-  id: 4,
-  name: 'Mineração Forte',
-  logo: '/lovable-uploads/5e396f3e-f563-4133-80ef-91d9a40a8247.png',
-  logoPosition: 'object-center'
-}];
+const specialties = [
+  {
+    id: 1,
+    title: 'Câmbios Automáticos',
+    description: 'Especialistas em diagnóstico, manutenção e reparo de câmbios automáticos de todas as marcas.',
+    icon: Gauge,
+    features: ['Diagnóstico computadorizado', 'Troca de fluidos', 'Reparos completos']
+  },
+  {
+    id: 2,
+    title: 'Veículos Elétricos',
+    description: 'Atendimento especializado para carros elétricos e híbridos com tecnologia de ponta.',
+    icon: Battery,
+    features: ['Manutenção de baterias', 'Sistemas elétricos', 'Diagnóstico avançado']
+  },
+  {
+    id: 3,
+    title: 'Manutenção Preventiva',
+    description: 'Revisões completas para manter seu veículo sempre em perfeito funcionamento.',
+    icon: Wrench,
+    features: ['Checklist completo', 'Troca de filtros', 'Verificação geral']
+  },
+  {
+    id: 4,
+    title: 'Sistema de Freios',
+    description: 'Manutenção completa do sistema de freios para sua segurança e tranquilidade.',
+    icon: Car,
+    features: ['Pastilhas e discos', 'Fluido de freio', 'Teste de segurança']
+  }
+];
 
 const Testimonials = () => {
   return (
-    <section id="clients" className="section py-20 bg-transparent">
+    <section id="specialties" className="section py-20 bg-transparent">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-ds3-dark mb-6 text-shadow-md">Nossos Principais Clientes</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-6 text-shadow-md">Nossas Especialidades</h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Conheça os serviços especializados que oferecemos com qualidade e tecnologia de ponta
+          </p>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {clients.map(client => (
-            <div key={client.id} className="bg-white/90 backdrop-blur-sm shadow-sm hover:shadow-md transition-all p-8 rounded-lg flex items-center justify-center h-48">
-              <img src={client.logo} alt={client.name} className="max-h-32 object-contain" />
+          {specialties.map(specialty => (
+            <div key={specialty.id} className="glass rounded-lg p-6 hover:shadow-md transition-all duration-300 transform hover:scale-[1.02]">
+              <div className="bg-primary/10 p-4 rounded-lg inline-block mb-5">
+                <specialty.icon className="text-primary" size={32} />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-3">{specialty.title}</h3>
+              <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{specialty.description}</p>
+              <ul className="space-y-2">
+                {specialty.features.map((feature, index) => (
+                  <li key={index} className="flex items-center text-sm text-muted-foreground">
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 flex-shrink-0"></div>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
