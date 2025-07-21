@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Clock } from 'lucide-react';
-
 const Footer = () => {
-  return (
-    <footer className="bg-accent text-accent-foreground">
+  return <footer className="bg-accent text-accent-foreground">
       <div className="container-custom py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact Information */}
@@ -27,7 +24,9 @@ const Footer = () => {
           </div>
           
           {/* Quick Links */}
-          <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <div className="animate-fade-in" style={{
+          animationDelay: '0.1s'
+        }}>
             <h3 className="text-xl font-semibold mb-6">Links Rápidos</h3>
             <ul className="space-y-3">
               <li>
@@ -49,7 +48,9 @@ const Footer = () => {
           </div>
           
           {/* Hours and Social Media */}
-          <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="animate-fade-in" style={{
+          animationDelay: '0.2s'
+        }}>
             <h3 className="text-xl font-semibold mb-6">Horário de Funcionamento</h3>
             <div className="space-y-2 mb-6">
               <div className="flex items-center">
@@ -58,7 +59,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <Clock className="mr-2 text-primary" size={16} />
-                <span className="text-sm">Sábado: 08:00 - 12:00</span>
+                <span className="text-sm">Sábado: Fechado</span>
               </div>
               <div className="flex items-center">
                 <Clock className="mr-2 text-primary" size={16} />
@@ -86,8 +87,6 @@ const Footer = () => {
           <p>© {new Date().getFullYear()} Mecânica Godin. Todos os direitos reservados.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
