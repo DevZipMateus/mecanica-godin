@@ -102,14 +102,17 @@ const Services = () => {
           
           {/* Right Side - Video */}
           <div className="px-4 flex items-center justify-center">
-            <div className="glass rounded-lg p-6 w-full max-w-lg">
+            <div className="glass rounded-lg p-6 w-full">
               <h3 className="text-xl font-bold text-foreground mb-4 text-center text-shadow-sm">
                 Conheça Nossa Oficina
               </h3>
-              <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+              <div className="relative w-full rounded-lg overflow-hidden shadow-lg">
                 <video 
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto object-contain"
                   controls
+                  loop
+                  autoplay
+                  muted
                   preload="metadata"
                   poster="/lovable-uploads/logo.png"
                 >
