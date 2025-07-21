@@ -51,11 +51,13 @@ const Header = () => {
         <div className="container-custom py-2 sm:py-4">
           <div className="flex justify-between items-center">
             {/* Logo */}
-            <div className="text-xl sm:text-2xl font-bold transition-all duration-300 transform hover:scale-[1.02]">
+            <div className="transition-all duration-300 transform hover:scale-[1.02]">
               <div className="flex items-center">
-                <div className="bg-primary text-primary-foreground px-3 py-2 rounded-lg font-bold text-lg sm:text-xl">
-                  MECÂNICA GODIN
-                </div>
+                <img 
+                  src="/lovable-uploads/04ff7122-a54f-4ec2-8c13-5a1f13638784.png" 
+                  alt="Mecânica Godin - Câmbios Automáticos" 
+                  className="h-12 sm:h-16 w-auto"
+                />
               </div>
             </div>
             
@@ -140,10 +142,12 @@ const Header = () => {
       <div className={`fixed top-0 left-0 w-full h-full bg-accent z-50 transform transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="container-custom py-4 h-full flex flex-col">
           <div className="flex justify-between items-center mb-8 pt-4">
-            <div className="text-xl font-bold">
-              <div className="bg-primary text-primary-foreground px-3 py-2 rounded-lg font-bold">
-                MECÂNICA GODIN
-              </div>
+            <div>
+              <img 
+                src="/lovable-uploads/04ff7122-a54f-4ec2-8c13-5a1f13638784.png" 
+                alt="Mecânica Godin - Câmbios Automáticos" 
+                className="h-12 w-auto"
+              />
             </div>
             <button 
               className="text-accent-foreground hover:text-primary focus:outline-none p-2" 
