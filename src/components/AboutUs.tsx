@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Check, Award, Users, Clock } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -8,9 +7,12 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  CarouselApi,
 } from "@/components/ui/carousel";
 
 const AboutUs = () => {
+  const [api, setApi] = React.useState<CarouselApi>();
+
   const carouselImages = [
     {
       src: "/lovable-uploads/0f3e57de-fc1e-4b5e-9392-f8452f5c647b.png",
@@ -37,6 +39,18 @@ const AboutUs = () => {
       alt: "Serviço de alinhamento e balanceamento de pneus"
     }
   ];
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [api]);
 
   return (
     <>
@@ -128,6 +142,7 @@ const AboutUs = () => {
 
           <div className="relative">
             <Carousel 
+              setApi={setApi}
               opts={{
                 align: "start",
                 loop: true,
