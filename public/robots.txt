@@ -1,0 +1,22 @@
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://mecanicagodin.com.br/sitemap.xml
+
+# Disallow admin and private areas (preparado para futuro uso)
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /*.json$
+Disallow: /api/
+
+# Allow specific important pages
+Allow: /
+Allow: /#sobre
+Allow: /#servicos
+Allow: /#contato
+
+# Crawl delay (optional)
+Crawl-delay: 1

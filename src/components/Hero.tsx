@@ -1,8 +1,7 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useIsMobile } from '../hooks/use-mobile';
-import { Button } from '@/components/ui/button';
+import { Wrench, Car, Battery, Gauge } from 'lucide-react';
 
 const Hero = () => {
   const isMobile = useIsMobile();
@@ -12,55 +11,82 @@ const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/lovable-uploads/66ded53a-d6e4-4b83-b0cf-f477bffcd5cd.png" 
-          alt="Trabalhador offshore com vista para plataforma petrolífera" 
+          src="https://images.unsplash.com/photo-1486754735734-325b5831c3ad?q=80&w=1470&auto=format&fit=crop" 
+          alt="Oficina mecânica moderna com equipamentos especializados" 
           className="w-full h-full object-cover object-center" 
+          loading="eager"
         />
-        <div className="absolute inset-0 bg-ds3-dark/70"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
       
       <div className="container-custom relative z-10">
         <div className="max-w-4xl py-0">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white text-shadow-header mb-6 sm:mb-8 animate-fade-in leading-tight">
-            Excelência em Proteção
-          </h1>
+          <div className="animate-fade-in">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white text-shadow-header mb-4 sm:mb-6 leading-tight">
+              Mecânica Godin
+            </h1>
+            <p className="text-lg sm:text-xl md:text-2xl text-white/90 text-shadow-md mb-8 font-medium">
+              Especialista em Câmbios Automáticos e Carros Elétricos
+            </p>
+          </div>
           
-          <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 animate-fade-in" style={{
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 animate-fade-in mb-16 sm:mb-20" style={{
             animationDelay: '0.2s'
           }}>
-            <Link to="/linha-profissional" className="bg-ds3-gold hover:bg-ds3-gold/90 text-ds3-dark px-6 sm:px-8 py-3 rounded font-medium text-base sm:text-lg transition-all text-shadow-sm text-center">
-              VER SOLUÇÕES
-            </Link>
+            <a 
+              href="#services" 
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-3 rounded font-medium text-base sm:text-lg transition-all text-shadow-sm text-center inline-block"
+            >
+              NOSSOS SERVIÇOS
+            </a>
             
-            <Link to="#about" className="bg-transparent border border-white text-white hover:bg-white/10 px-6 sm:px-8 py-3 rounded font-medium text-base sm:text-lg transition-all text-shadow text-center">
-              SOBRE A DS3
-            </Link>
+            <a 
+              href="#about" 
+              className="bg-transparent border border-white text-white hover:bg-white/10 px-6 sm:px-8 py-3 rounded font-medium text-base sm:text-lg transition-all text-shadow text-center inline-block"
+            >
+              SOBRE NÓS
+            </a>
           </div>
 
           {/* Service Categories */}
-          <div className="mt-16 sm:mt-20 md:mt-24 lg:mt-32 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 animate-fade-in" style={{
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 animate-fade-in" style={{
             animationDelay: '0.3s'
           }}>
-            <Link to="/enxoval-offshore" className="flex items-center bg-black/30 backdrop-blur-sm hover:bg-black/40 p-3 sm:p-4 rounded-lg transition-all group">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 mr-3 bg-ds3-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
-                <img src="/lovable-uploads/87e15858-fe61-4896-852e-32125d20e4af.png" alt="Offshore" className="w-5 h-5 sm:w-6 sm:h-6 opacity-70" />
+            <div className="flex items-center bg-black/40 backdrop-blur-sm hover:bg-black/50 p-3 sm:p-4 rounded-lg transition-all group">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 mr-3 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <Gauge className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
               </div>
-              <span className="text-white font-medium group-hover:text-ds3-gold transition-colors text-shadow text-sm sm:text-base">Enxovais Offshore & Onshore</span>
-            </Link>
+              <span className="text-white font-medium group-hover:text-primary transition-colors text-shadow text-sm sm:text-base">
+                Câmbios Automáticos
+              </span>
+            </div>
             
-            <Link to="/enxoval-hospitalar" className="flex items-center bg-black/30 backdrop-blur-sm hover:bg-black/40 p-3 sm:p-4 rounded-lg transition-all group">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 mr-3 bg-ds3-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
-                <img src="/lovable-uploads/87e15858-fe61-4896-852e-32125d20e4af.png" alt="Hospital" className="w-5 h-5 sm:w-6 sm:h-6 opacity-70" />
+            <div className="flex items-center bg-black/40 backdrop-blur-sm hover:bg-black/50 p-3 sm:p-4 rounded-lg transition-all group">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 mr-3 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <Battery className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
               </div>
-              <span className="text-white font-medium group-hover:text-ds3-gold transition-colors text-shadow text-sm sm:text-base">Enxovais Hospitalares</span>
-            </Link>
+              <span className="text-white font-medium group-hover:text-primary transition-colors text-shadow text-sm sm:text-base">
+                Carros Elétricos
+              </span>
+            </div>
             
-            <Link to="/linha-profissional" className="flex items-center bg-black/30 backdrop-blur-sm hover:bg-black/40 p-3 sm:p-4 rounded-lg transition-all group md:col-span-1">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 mr-3 bg-ds3-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
-                <img src="/lovable-uploads/87e15858-fe61-4896-852e-32125d20e4af.png" alt="Professional" className="w-5 h-5 sm:w-6 sm:h-6 opacity-70" />
+            <div className="flex items-center bg-black/40 backdrop-blur-sm hover:bg-black/50 p-3 sm:p-4 rounded-lg transition-all group">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 mr-3 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <Wrench className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
               </div>
-              <span className="text-white font-medium group-hover:text-ds3-gold transition-colors text-shadow text-sm sm:text-base">Linha Profissional</span>
-            </Link>
+              <span className="text-white font-medium group-hover:text-primary transition-colors text-shadow text-sm sm:text-base">
+                Revisão Completa
+              </span>
+            </div>
+            
+            <div className="flex items-center bg-black/40 backdrop-blur-sm hover:bg-black/50 p-3 sm:p-4 rounded-lg transition-all group sm:col-span-2 lg:col-span-1">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 mr-3 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <Car className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+              </div>
+              <span className="text-white font-medium group-hover:text-primary transition-colors text-shadow text-sm sm:text-base">
+                Sistema de Freios
+              </span>
+            </div>
           </div>
         </div>
       </div>

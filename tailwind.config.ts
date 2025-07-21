@@ -63,11 +63,16 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				ds3: {
-					gold: '#f2cd69', // Gold color (30%)
-					dark: '#131619', // Dark color (10%)
-					white: '#ffffff', // White (60%)
+				// Cores específicas da Mecânica Godin
+				mecanica: {
+					red: 'hsl(0, 75%, 25%)', // Vermelho escuro (30%)
+					dark: 'hsl(0, 0%, 9%)', // Preto (10%)
+					white: 'hsl(0, 0%, 100%)', // Branco (60%)
 				}
+			},
+			fontFamily: {
+				sans: ['Inter', 'Roboto', 'sans-serif'],
+				display: ['Inter', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -156,6 +161,16 @@ export default {
 						opacity: '0.85',
 						transform: 'scale(1.05)'
 					}
+				},
+				'garage-roll': {
+					'0%': {
+						transform: 'translateX(-100%)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'translateX(0)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
@@ -167,7 +182,8 @@ export default {
 				'slide-in': 'slide-in 0.5s ease-out',
 				'slide-in-right': 'slide-in-right 0.3s ease-out',
 				'float': 'float 3s ease-in-out infinite',
-				'pulse': 'pulse 2s ease-in-out infinite'
+				'pulse': 'pulse 2s ease-in-out infinite',
+				'garage-roll': 'garage-roll 0.8s ease-out'
 			}
 		}
 	},
