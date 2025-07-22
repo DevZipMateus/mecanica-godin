@@ -7,6 +7,7 @@ import Services from '../components/Services';
 import AboutUs from '../components/AboutUs';
 import Team from '../components/Team';
 import Testimonials from '../components/Testimonials';
+import Authorized from '../components/Authorized';
 import Contact from '../components/Contact';
 import FloatingButton from '../components/FloatingButton';
 
@@ -25,6 +26,7 @@ const Index = () => {
         <Services />
         <AboutUs />
         <Team />
+        <Authorized />
         <Testimonials />
         <Contact />
       </main>
