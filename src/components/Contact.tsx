@@ -1,13 +1,9 @@
-
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
-
 const Contact = () => {
   const isMobile = useIsMobile();
-
-  return (
-    <section id="contact" className="section bg-transparent">
+  return <section id="contact" className="section bg-transparent">
       <div className="container-custom py-12 sm:py-16 lg:py-20 px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
@@ -33,13 +29,7 @@ const Contact = () => {
             <div className="p-4 sm:p-6 text-center">
               <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2">WhatsApp</h3>
               <p className="text-sm sm:text-base text-muted-foreground mb-4">Atendimento rápido e prático</p>
-              <a 
-                href="https://wa.me/5546999418304" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground px-4 sm:px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium text-sm sm:text-base w-full sm:w-auto"
-                aria-label="Enviar mensagem via WhatsApp"
-              >
+              <a href="https://wa.me/5546999418304" target="_blank" rel="noopener noreferrer" className="bg-accent hover:bg-accent/90 text-accent-foreground px-4 sm:px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium text-sm sm:text-base w-full sm:w-auto" aria-label="Enviar mensagem via WhatsApp">
                 <span>Enviar mensagem</span>
               </a>
             </div>
@@ -47,21 +37,15 @@ const Contact = () => {
           
           {/* Phone Card - Now also goes to WhatsApp */}
           <div className="glass rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{
-            animationDelay: '0.1s'
-          }}>
+          animationDelay: '0.1s'
+        }}>
             <div className="bg-primary p-4 sm:p-6 flex items-center justify-center">
               <Phone className="w-12 h-12 sm:w-16 sm:h-16 text-primary-foreground" />
             </div>
             <div className="p-4 sm:p-6 text-center">
               <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2">WhatsApp</h3>
               <p className="text-sm sm:text-base text-muted-foreground mb-4">Fale diretamente conosco</p>
-              <a 
-                href="https://wa.me/5546999418304" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground px-4 sm:px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium text-sm sm:text-base w-full sm:w-auto"
-                aria-label="Entrar em contato via WhatsApp"
-              >
+              <a href="https://wa.me/5546999418304" target="_blank" rel="noopener noreferrer" className="bg-accent hover:bg-accent/90 text-accent-foreground px-4 sm:px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium text-sm sm:text-base w-full sm:w-auto" aria-label="Entrar em contato via WhatsApp">
                 <span>Conversar no WhatsApp</span>
               </a>
             </div>
@@ -69,21 +53,15 @@ const Contact = () => {
           
           {/* Email Card - Now also goes to WhatsApp */}
           <div className="glass rounded-xl shadow-sm overflow-hidden animate-fade-in sm:col-span-2 lg:col-span-1" style={{
-            animationDelay: '0.2s'
-          }}>
+          animationDelay: '0.2s'
+        }}>
             <div className="bg-accent p-4 sm:p-6 flex items-center justify-center">
               <MessageCircle className="w-12 h-12 sm:w-16 sm:h-16 text-accent-foreground" />
             </div>
             <div className="p-4 sm:p-6 text-center">
               <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2">Mensagem</h3>
               <p className="text-sm sm:text-base text-muted-foreground mb-4">Envie sua mensagem</p>
-              <a 
-                href="https://wa.me/5546999418304" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground px-4 sm:px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium text-xs sm:text-sm w-full sm:w-auto"
-                aria-label="Enviar mensagem via WhatsApp"
-              >
+              <a href="https://wa.me/5546999418304" target="_blank" rel="noopener noreferrer" className="bg-accent hover:bg-accent/90 text-accent-foreground px-4 sm:px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium text-xs sm:text-sm w-full sm:w-auto" aria-label="Enviar mensagem via WhatsApp">
                 <span>Enviar via WhatsApp</span>
               </a>
             </div>
@@ -105,12 +83,7 @@ const Contact = () => {
                     Avenida das Missões, 209<br />
                     Jardim Floresta - Ampére, PR
                   </p>
-                  <a 
-                    href="https://www.google.com/maps/place/Av.+das+Miss%C3%B5es,+209+-+Jardim+Floresta,+Amp%C3%A9re+-+PR/" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-primary hover:text-primary/80 transition-colors duration-300 mt-2 inline-block text-sm sm:text-base"
-                  >
+                  <a href="https://www.google.com/maps/place/Av.+das+Miss%C3%B5es,+209+-+Jardim+Floresta,+Amp%C3%A9re+-+PR/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors duration-300 mt-2 inline-block text-sm sm:text-base">
                     Ver no mapa
                   </a>
                 </div>
@@ -118,18 +91,9 @@ const Contact = () => {
               
               {/* Google Maps Embed */}
               <div className="w-full h-48 sm:h-64 mt-4 rounded-lg overflow-hidden">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.9!2d-53.4753!3d-25.9116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDU0JzQxLjgiUyA1M8KwMjgnMzEuMSJX!5e0!3m2!1spt-BR!2sbr!4v1640000000000!5m2!1spt-BR!2sbr" 
-                  width="100%" 
-                  height="100%" 
-                  style={{
-                    border: 0
-                  }} 
-                  allowFullScreen 
-                  loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade" 
-                  title="Localização da Mecânica Godin em Ampére PR"
-                ></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.9!2d-53.4753!3d-25.9116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDU0JzQxLjgiUyA1M8KwMjgnMzEuMSJX!5e0!3m2!1spt-BR!2sbr!4v1640000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style={{
+                border: 0
+              }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Localização da Mecânica Godin em Ampére PR"></iframe>
               </div>
             </div>
             
@@ -149,7 +113,7 @@ const Contact = () => {
                 </div>
                 <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-0">
                   <span className="text-sm sm:text-base text-muted-foreground">Sábado:</span>
-                  <span className="font-medium text-foreground text-sm sm:text-base">08:00 - 12:00</span>
+                  <span className="font-medium text-foreground text-sm sm:text-base">Fechado</span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-0">
                   <span className="text-sm sm:text-base text-muted-foreground">Domingo:</span>
@@ -160,13 +124,7 @@ const Contact = () => {
               {/* WhatsApp CTA */}
               <div className="border-t pt-6">
                 <h5 className="text-base font-semibold text-foreground mb-3">Precisa de atendimento?</h5>
-                <a 
-                  href="https://wa.me/5546999418304" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors font-medium text-sm"
-                  aria-label="Entrar em contato via WhatsApp"
-                >
+                <a href="https://wa.me/5546999418304" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors font-medium text-sm" aria-label="Entrar em contato via WhatsApp">
                   <MessageCircle size={16} className="mr-2" />
                   Falar no WhatsApp
                 </a>
@@ -175,8 +133,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
