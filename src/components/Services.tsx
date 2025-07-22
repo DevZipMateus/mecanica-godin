@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Gauge, Wrench, Car, Battery, ArrowRight } from 'lucide-react';
+import { Gauge, Wrench, Car, ArrowRight } from 'lucide-react';
 
 const services = [
   {
@@ -13,26 +12,18 @@ const services = [
   },
   {
     id: 2,
-    title: 'Carros Elétricos e Híbridos',
-    description: 'Atendimento especializado para veículos elétricos e híbridos. Manutenção de baterias, sistemas elétricos e componentes específicos.',
-    icon: Battery,
-    delay: '0.1s',
-    features: ['Manutenção de baterias', 'Sistemas elétricos', 'Diagnóstico especializado', 'Técnicos certificados']
-  },
-  {
-    id: 3,
     title: 'Revisão Completa',
     description: 'Revisão preventiva completa do seu veículo. Verificação de todos os sistemas, troca de filtros, fluidos e checklist detalhado.',
     icon: Wrench,
-    delay: '0.2s',
+    delay: '0.1s',
     features: ['Checklist completo', 'Troca de filtros', 'Verificação de fluidos', 'Relatório detalhado']
   },
   {
-    id: 4,
+    id: 3,
     title: 'Sistema de Freios',
     description: 'Manutenção e reparo completo do sistema de freios. Pastilhas, discos, fluido de freio e todo o sistema de segurança.',
     icon: Car,
-    delay: '0.3s',
+    delay: '0.2s',
     features: ['Pastilhas e discos', 'Fluido de freio', 'Sistema ABS', 'Teste de segurança']
   }
 ];
