@@ -1,22 +1,26 @@
 
 import React from 'react';
+import { ExternalLink } from 'lucide-react';
 
 const Authorized = () => {
   const authorizedCompanies = [
     {
       name: 'CAB',
       logo: '/lovable-uploads/8db8c71d-5d85-48a6-9b37-361acc777511.png',
-      description: 'Câmbio Automático do Brasil'
+      description: 'Câmbio Automático do Brasil',
+      website: 'https://cambioautomaticodobrasil.com.br/'
     },
     {
       name: 'Doutor IE',
       logo: '/lovable-uploads/9c4c5428-cfa3-4611-bf7d-27eebbbd57c6.png',
-      description: 'Especialista em Injeção Eletrônica'
+      description: 'Especialista em Injeção Eletrônica',
+      website: 'https://doutorie.com.br/'
     },
     {
       name: 'Bosch',
       logo: '/lovable-uploads/15903337-f580-4a2b-b316-59cd7a9ccac2.png',
-      description: 'Tecnologia e Serviços'
+      description: 'Tecnologia e Serviços',
+      website: 'https://www.lojaboschferramentas.com.br/?gad_source=1&gad_campaignid=20361910526&gbraid=0AAAAAo2o5xcZ43myJmdXw2voHnN-6D3zB&gclid=CjwKCAjw7fzDBhA7EiwAOqJkh7BgAr_6CfNVVyi3-SIhEoUPe9DESR-oKx4z_aMJAEdOPTYkwrEdqRoCfo0QAvD_BwE'
     }
   ];
 
@@ -39,11 +43,21 @@ const Authorized = () => {
               className="glass rounded-lg p-8 text-center card-hover group"
             >
               <div className="flex justify-center items-center mb-6 h-24">
-                <img
-                  src={company.logo}
-                  alt={`Logo ${company.name}`}
-                  className="max-h-full max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300"
-                />
+                <a
+                  href={company.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative group/link"
+                >
+                  <img
+                    src={company.logo}
+                    alt={`Logo ${company.name}`}
+                    className="max-h-full max-w-full object-contain filter group-hover/link:scale-105 transition-transform duration-300 cursor-pointer"
+                  />
+                  <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover/link:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                    <ExternalLink className="w-6 h-6 text-primary" />
+                  </div>
+                </a>
               </div>
               
               <h3 className="text-xl font-semibold text-foreground mb-2">
