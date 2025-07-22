@@ -52,20 +52,7 @@ const Contact = () => {
           </div>
           
           {/* Email Card - Now also goes to WhatsApp */}
-          <div className="glass rounded-xl shadow-sm overflow-hidden animate-fade-in sm:col-span-2 lg:col-span-1" style={{
-          animationDelay: '0.2s'
-        }}>
-            <div className="bg-accent p-4 sm:p-6 flex items-center justify-center">
-              <MessageCircle className="w-12 h-12 sm:w-16 sm:h-16 text-accent-foreground" />
-            </div>
-            <div className="p-4 sm:p-6 text-center">
-              <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2">Mensagem</h3>
-              <p className="text-sm sm:text-base text-muted-foreground mb-4">Envie sua mensagem</p>
-              <a href="https://wa.me/5546999418304" target="_blank" rel="noopener noreferrer" className="bg-accent hover:bg-accent/90 text-accent-foreground px-4 sm:px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium text-xs sm:text-sm w-full sm:w-auto" aria-label="Enviar mensagem via WhatsApp">
-                <span>Enviar via WhatsApp</span>
-              </a>
-            </div>
-          </div>
+          
         </div>
         
         {/* Address and Hours Card */}
