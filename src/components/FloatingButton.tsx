@@ -22,6 +22,10 @@ const FloatingButton = () => {
     setIsOpen(!isOpen);
     setIsPulsing(false); // Stop pulsing when opened
   };
+
+  const goToWhatsApp = () => {
+    window.open('https://wa.me/5546999418304', '_blank', 'noopener,noreferrer');
+  };
   
   return (
     <div className={`fixed ${isMobile ? 'bottom-3 right-3' : 'bottom-6 right-6 lg:bottom-8 lg:right-8'} z-50`}>
@@ -54,19 +58,23 @@ const FloatingButton = () => {
         </a>
       </div>
       
-      {/* Main Button */}
+      {/* Main Button - Now goes directly to WhatsApp */}
       <button
-        onClick={toggleMenu}
+        onClick={isOpen ? toggleMenu : goToWhatsApp}
         className={`${isMobile ? 'p-3' : 'p-3 sm:p-4'} rounded-full flex items-center justify-center transition-all duration-300 
           ${isOpen ? 'bg-red-500 hover:bg-red-600' : 'bg-primary hover:bg-primary/90'} 
           ${isOpen ? 'text-white' : 'text-primary-foreground'} 
           ${isPulsing && !isOpen ? 'animate-pulse' : ''}
           transform hover:scale-105 active:scale-95 shadow-lg`}
-        aria-label={isOpen ? "Fechar menu de contato" : "Abrir menu de contato"}
+        aria-label={isOpen ? "Fechar menu de contato" : "Abrir WhatsApp"}
         style={{
           boxShadow: isOpen 
             ? '0 4px 12px rgba(239, 68, 68, 0.4)' 
             : '0 4px 12px rgba(139, 0, 0, 0.4)'
+        }}
+        onContextMenu={(e) => {
+          e.preventDefault();
+          setIsOpen(!isOpen);
         }}
       >
         {isOpen ? (

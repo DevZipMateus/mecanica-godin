@@ -45,7 +45,7 @@ const Contact = () => {
             </div>
           </div>
           
-          {/* Phone Card */}
+          {/* Phone Card - Now also goes to WhatsApp */}
           <div className="glass rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{
             animationDelay: '0.1s'
           }}>
@@ -53,34 +53,38 @@ const Contact = () => {
               <Phone className="w-12 h-12 sm:w-16 sm:h-16 text-primary-foreground" />
             </div>
             <div className="p-4 sm:p-6 text-center">
-              <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2">Telefone</h3>
+              <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2">WhatsApp</h3>
               <p className="text-sm sm:text-base text-muted-foreground mb-4">Fale diretamente conosco</p>
               <a 
-                href="tel:+5546999418304" 
+                href="https://wa.me/5546999418304" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="bg-accent hover:bg-accent/90 text-accent-foreground px-4 sm:px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium text-sm sm:text-base w-full sm:w-auto"
-                aria-label="Ligar para a Mecânica Godin"
+                aria-label="Entrar em contato via WhatsApp"
               >
-                <span>(46) 99941-8304</span>
+                <span>Conversar no WhatsApp</span>
               </a>
             </div>
           </div>
           
-          {/* Email Card */}
+          {/* Email Card - Now also goes to WhatsApp */}
           <div className="glass rounded-xl shadow-sm overflow-hidden animate-fade-in sm:col-span-2 lg:col-span-1" style={{
             animationDelay: '0.2s'
           }}>
             <div className="bg-accent p-4 sm:p-6 flex items-center justify-center">
-              <Mail className="w-12 h-12 sm:w-16 sm:h-16 text-accent-foreground" />
+              <MessageCircle className="w-12 h-12 sm:w-16 sm:h-16 text-accent-foreground" />
             </div>
             <div className="p-4 sm:p-6 text-center">
-              <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2">E-mail</h3>
+              <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2">Mensagem</h3>
               <p className="text-sm sm:text-base text-muted-foreground mb-4">Envie sua mensagem</p>
               <a 
-                href="mailto:mecanicagodin2013@gmail.com" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground px-4 sm:px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium text-xs sm:text-sm w-full sm:w-auto break-all sm:break-normal"
-                aria-label="Enviar email para a Mecânica Godin"
+                href="https://wa.me/5546999418304" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground px-4 sm:px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium text-xs sm:text-sm w-full sm:w-auto"
+                aria-label="Enviar mensagem via WhatsApp"
               >
-                <span className="truncate sm:whitespace-normal">mecanicagodin2013@gmail.com</span>
+                <span>Enviar via WhatsApp</span>
               </a>
             </div>
           </div>
@@ -153,17 +157,18 @@ const Contact = () => {
                 </div>
               </div>
               
-              {/* Social Media */}
+              {/* WhatsApp CTA */}
               <div className="border-t pt-6">
-                <h5 className="text-base font-semibold text-foreground mb-3">Siga-nos nas redes sociais</h5>
+                <h5 className="text-base font-semibold text-foreground mb-3">Precisa de atendimento?</h5>
                 <a 
-                  href="https://instagram.com/mecanicagodinn" 
+                  href="https://wa.me/5546999418304" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-primary hover:text-primary/80 transition-colors"
-                  aria-label="Seguir no Instagram"
+                  className="inline-flex items-center bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors font-medium text-sm"
+                  aria-label="Entrar em contato via WhatsApp"
                 >
-                  <span className="text-sm">@mecanicagodinn</span>
+                  <MessageCircle size={16} className="mr-2" />
+                  Falar no WhatsApp
                 </a>
               </div>
             </div>
